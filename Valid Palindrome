@@ -1,0 +1,8 @@
+lass Solution:
+    def isPalindrome(self, s: str) -> bool:
+        l = ''.join(char.lower() for char in s if char.isalnum())
+        r = l[::-1]
+        if l == r:
+            return True
+        else: 
+            return False
