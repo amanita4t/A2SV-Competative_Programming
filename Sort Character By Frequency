@@ -1,0 +1,13 @@
+class Solution:
+    def frequencySort(self, s: str) -> str:
+        di = {}
+        for i in s:
+            if i in di:
+                di[i] += 1
+            else:
+                di[i] = 1
+        sort = sorted(di.items(), key=lambda item: item[1])
+        lis = ""
+        for i in sort:
+            lis += i[0]* i[1]
+        return lis[::-1]
