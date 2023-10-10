@@ -1,0 +1,7 @@
+class Solution:
+    def maxCoins(self, piles: List[int]) -> int:
+        piles.sort(reverse = True)
+        n = int(len(piles)/3)
+        piles = piles[:-n]
+        my_coins = sum(piles[1::2])
+        return my_coins
